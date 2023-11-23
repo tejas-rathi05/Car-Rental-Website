@@ -6,7 +6,6 @@ import { useState } from "react";
 import { CustomButton } from ".";
 import { calculateCarRent, generateCarImageUrl } from "@/utils";
 import Image from "next/image";
-import CarDetails from "./CarDetails";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -95,17 +94,10 @@ const CarCard = ({ car }: CarCardProps) => {
               containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
               textStyles="text-white text-[14px] leading-[17px] font-bold"
               rightIcon="/right-arrow.svg"
-              handleClick={() => {}}
             />
           </Link>
         </div>
       </div>
-
-      <CarDetails
-        isOpen={isOpen}
-        closeModal={() => setIsOpen(false)}
-        car={car}
-      />
     </div>
   );
 };

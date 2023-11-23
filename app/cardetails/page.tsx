@@ -1,9 +1,7 @@
-import ThumbnailCarousel from "@/components/ThumbnailCarousel";
 import { CarProps } from "@/types";
 import React from "react";
 import Image from "next/image";
 import { calculateCarRent, generateCarImageUrl } from "@/utils";
-import { CustomButton } from "@/components";
 
 const page = ({ searchParams }: { searchParams: CarProps }) => {
   const carRent = calculateCarRent(searchParams.city_mpg, searchParams.year)
